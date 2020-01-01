@@ -1,10 +1,33 @@
-nav,
+/* * {
+  background-color: red;
+} */
+
+body {
+  background-color: white;
+  font-size: 18px;
+  font-family: 'Montserrat';
+}
+nav {
+  padding: 18px;
+}
 main {
-  padding: 24px;
+  margin-top: 65px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat';
 }
 
 nav {
-  background-color: #039be5;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 5px 20px -10px #000;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav a {
@@ -12,30 +35,252 @@ nav a {
 }
 
 nav a h2 {
-  color: #ffffff;
+  color: rgba(0, 0, 0, 0.7);
   margin: 0;
 }
 
-main {
-  max-width: 700px;
-  margin: 0 auto;
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 .card {
-  border: 1px solid grey;
-  border-radius: 4px;
-  margin-top: 24px;
+  margin-top: 25px;
+  z-index: 2;
+}
+
+.card:hover {
+  background-color: white;
+  box-shadow: 4px 4px 16px 8px #a7a5a5;
 }
 
 .card img {
   width: 100%;
+  height: 300px;
 }
 
 .card-content {
   padding: 16px;
+  background-color: rgb(255, 255, 255);
 }
 
 .card-content a {
   display: inline-block;
   margin-top: 12px;
+  text-decoration: none;
+}
+
+.post {
+  max-width: 750px;
+  padding: 0 5%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  z-index: 2;
+}
+.postTitle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.postDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+.postImage {
+  width: 100%;
+  height: 350px;
+  margin: 15px auto;
+}
+
+.postContent p,
+ol,
+ul {
+  font-size: 16px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.6;
+}
+
+ul,
+ol {
+  margin: 10px 0;
+}
+
+.footer {
+  padding: 18px;
+  height: 50px;
+  background-color: #fff;
+  border-top: 1px solid #e4e4e4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+small {
+  color: #545454;
+  text-align: center;
+}
+
+.main-wrapper {
+  width: 100%;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+.centerContent {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 7%;
+  align-items: center;
+  flex-direction: column;
+  height: 88vh;
+  text-align: center;
+}
+
+.blog {
+  display: flex;
+  max-width: 750px;
+  padding: 0 5%;
+  margin-top: 10px;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background: #232741;
+  opacity: 0.9;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 87vh;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.primary-text {
+  margin: 0;
+  color: #fff;
+  padding: 0 0 10px;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 5.5px;
+  text-transform: uppercase;
+}
+
+.secondary-text {
+  margin: 0;
+  padding: 0 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.createPost {
+  width: 60%;
+  margin-top: 10px;
+  padding: 0 4%;
+  /* height: 85.5vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bg-wrapper {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.particles-copy {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.login {
+  margin: 15px;
+  font-family: 'Montserrat';
+  width: 300px;
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  border-radius: 10px 0px 10px 0px;
+  border: none;
+  background: #edf0f5;
+  outline: none;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  background: #042f44;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Work Sans';
+  pointer-events: all;
+}
+
+.errorMessage {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  color: red;
 }
