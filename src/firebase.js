@@ -1,14 +1,14 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCxKMI4a31gvjjfm17b0h9Kxbg_Ckzd-SY',
-  authDomain: 'favourcodes.firebaseapp.com',
-  databaseURL: 'https://favourcodes.firebaseio.com',
-  projectId: 'favourcodes',
-  storageBucket: 'favourcodes.appspot.com',
-  messagingSenderId: '1035168803182',
-  appId: '1:1035168803182:web:2cc71868553ad02ae7397f',
-  measurementId: 'G-MQVY0JMR4E',
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP__STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 let firebaseCache;

@@ -110,7 +110,6 @@ const Create = () => {
 
   const createPost = () => {
     const date = generateDate();
-    setContent(marked(content));
     const newPost = {
       title,
       datePretty: date.pretty,
@@ -118,7 +117,7 @@ const Create = () => {
       slug,
       coverImage,
       coverImageAlt,
-      content,
+      content: marked(content),
     };
 
     getFirebase()
@@ -126,7 +125,8 @@ const Create = () => {
       .ref()
       .child(`posts/${slug}`)
       .set(newPost)
-      .then(() => this.props.history.push(`/`))
+      // eslint-disable-next-line no-restricted-globals
+      .then(() => history.push(`/`))
       .catch(error => alert(error));
   };
 
