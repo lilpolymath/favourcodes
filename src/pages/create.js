@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <div className='centerContent'>
-      <h1>Unauthorized User. Please sign in.</h1>
+      <h1>Welcome!</h1>
       <form>
         <p className='errorMessage'>{errorMessage}</p>
         <input
@@ -109,6 +109,9 @@ const Create = () => {
   const [content, setContent] = useState('');
 
   const createPost = () => {
+    if ((title && slug && coverImage && coverImage && content) === false) {
+      return console.log('Check the details.');
+    }
     const date = generateDate();
     const newPost = {
       title,
