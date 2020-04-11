@@ -32,7 +32,7 @@ const Landing = () => {
             }}
           />
           <h2 className='secondary-text'>
-            Freelance Software Developer for react.js, react native and python
+            Freelance Software Developer for react.js, react native and python.
           </h2>
         </div>
       </div>
