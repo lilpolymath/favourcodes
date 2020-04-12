@@ -66,15 +66,18 @@ const Home = () => {
   if (loading && !blogPosts.length) {
     getFirebase()
       .database()
-      .ref('/posts')
-      .orderByChild('dateFormatted')
+      .ref('posts')
+      .orderByChild('id')
       .once('value')
       .then(snapshot => {
         let posts = [];
 
         const snapshotVal = snapshot.val();
+        console.log(snapshotVal);
+
         for (let slug in snapshotVal) {
           posts.push(snapshotVal[slug]);
+          console.log(posts);
         }
 
         const newestFirst = posts.reverse();
@@ -105,7 +108,7 @@ const Home = () => {
             <div className='card-content'>
               <Link to={`/${blogPost.slug}`}>
                 <h2>
-                  {blogPost.title} &mdash;{' '}
+                  {blogPost.title} &#8211;{' '}
                   <span style={{ color: '#5e5e5e' }}>
                     {blogPost.datePretty}
                   </span>

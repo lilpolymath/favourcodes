@@ -18,7 +18,7 @@ const Landing = () => {
   return (
     <>
       <div className='landing-page'>
-        <div className='image-wrapper'>
+        <div className='background-wrapper'>
           <Particles className='particles' params={particlesOptions} />
         </div>
         <div className='title'>

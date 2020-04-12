@@ -110,7 +110,7 @@ const Create = () => {
 
   const createPost = () => {
     if ((title && slug && coverImage && coverImage && content) === false) {
-      return console.log('Check the details.');
+      return alert('Check the details.');
     }
     const date = generateDate();
     const newPost = {
@@ -128,8 +128,7 @@ const Create = () => {
       .ref()
       .child(`posts/${slug}`)
       .set(newPost)
-      // eslint-disable-next-line no-restricted-globals
-      .then(() => history.push(`/`))
+      .then(() => history.push('/'))
       .catch(error => alert(error));
   };
 
